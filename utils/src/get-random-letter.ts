@@ -1,1 +1,1 @@
-export const getRandomLetter = (): string => Math.random() > 0.5 ? "A" : "B";
+export const getRandomLetter = (): string => Math.random() > 0.5 ? "C" : "D";

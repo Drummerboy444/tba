@@ -20,3 +20,11 @@ jobs:
 
       - name: Check
         run: "deno task check:all"
+
+      - name: Install deployctl
+        run: "deno install -gArf jsr:@deno/deployctl"
+
+      - name: Deploy
+        env:
+          DENO_DEPLOY_TOKEN: ${{ secrets.DENO_DEPLOY_TOKEN }}
+        run: "deployctl deploy --project=tba-api --prod ./api/main.ts"
