@@ -1,3 +1,16 @@
 {
-  "workspace": ["./utils", "./api"]
+  "workspace": ["./utils", "./api"],
+  "tasks": {
+    "check:types": "deno check **/*.ts",
+    "check:format": "deno fmt --check",
+    "check:lint": "deno lint",
+    "check:test": "deno test",
+    "check:all": "deno task check:types && deno task check:format && deno task check:lint && deno task check:test"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1"
+  },
+  "compilerOptions": {
+    "noUncheckedIndexedAccess": true
+  }
 }
