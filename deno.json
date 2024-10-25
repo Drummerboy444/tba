@@ -1,5 +1,5 @@
 {
-  "workspace": ["./utils", "./api"],
+  "workspace": ["./packages/utils", "./services/api"],
   "tasks": {
     "check:types": "deno check **/*.ts",
     "check:format": "deno fmt --check",

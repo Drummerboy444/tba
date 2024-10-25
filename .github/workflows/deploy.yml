@@ -27,4 +27,4 @@ jobs:
       - name: Deploy
         env:
           DENO_DEPLOY_TOKEN: ${{ secrets.DENO_DEPLOY_TOKEN }}
-        run: "deployctl deploy --project=tba-api --prod ./api/main.ts"
+        run: "deployctl deploy --project=tba-api --prod ./services/api/main.ts"
