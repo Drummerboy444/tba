@@ -1,6 +1,3 @@
-import { getRandomLetter } from "@tba/utils";
+import { startServer } from "./src/start-server.ts";
 
-Deno.serve(() => {
-  const randomLetter = getRandomLetter();
-  return new Response(`Your random letter was "${randomLetter}"`);
-});
+startServer();
